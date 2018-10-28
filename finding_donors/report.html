@@ -12897,7 +12897,8 @@ Look at the graph at the bottom left from the cell above(the visualization creat
 <p><strong>Answer: </strong>
 the best model in scores is random forest but in time of  training and predicting is very big and ineffiecient compared to other two models .</p>
 <p>the model with a small timing in training and predicting with a score a little smaller than the random forest is SGD .
-the time s very efficient , the scores is very near to the best except the training f score , but in general it's the best model to go through with .</p>
+the time is very efficient , the scores is very near to the best except the training f score , but in general it's the best model to go through with .</p>
+<p>this model suits the data as the prediction time is great and also the trainig time which is good for our data , accuracy is required and it's not bad considering the results . it works with a lot of features that nearly linear distributed like our data .</p>
 
 </div>
 </div>
@@ -12921,9 +12922,10 @@ the time s very efficient , the scores is very near to the best except the train
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><a href="https://machinelearningmastery.com/gradient-descent-for-machine-learning/">https://machinelearningmastery.com/gradient-descent-for-machine-learning/</a></p>
 <p>the gradient descent procedure described above is run but the update to the coefficients is performed for each training instance, rather than at the end of the batch of instances.</p>
-<p>1- The first step of the procedure requires that the order of the training dataset is randomized (shuffled). This is to mix up the order that updates are made to the coefficients ( of the function that representes the data )</p>
-<p>2 -  the coefficients are updated after every training instance, the updates will be noisy jumping all over the place, and so will the corresponding cost function. By mixing up the order for the updates to the coefficients, it harnesses this random walk and avoids it getting distracted or stuck.</p>
-<p>3-  you only need a small number of passes through the dataset to reach a good or good enough set of coefficients, e.g. 1-to-10 passes through the dataset.</p>
+<p>1- The first step of the procedure requires that the order of the training dataset is randomized (shuffled). This is to mix up the order that updates are made to the coefficients ( of the function that representes the data ) , basically shuffling our data to ensure that we use randomized data to maximize the accuracy with preventing only memorizing the data ( overfitting)</p>
+<p>2 -  the function that representes our result ( the way we will use to seperate data or our prediction model )  are updated after every training instance ( with each element in the data set ), the updates will be noisy jumping all over the place, and so will the corresponding cost function. By mixing up the order for the updates to this function , it harnesses this random walk and avoids it getting distracted or stuck , thats why we should shuffle the data and randomize it .</p>
+<p>3-  you only need a small number of passes through the dataset to reach a good or good enough seperting model, e.g. 1-to-10 passes through the dataset.</p>
+<p>4 - when we need the model to predict , it calculate a score using the function we constructed from the training data then compare it to 0 to know which side it belongs .</p>
 
 </div>
 </div>
